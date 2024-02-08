@@ -55,7 +55,12 @@
                 </p>
                 <p>
                   <label for="password">Password</label
-                  ><input type="password" id="password" name="userPassword" />
+                  ><input
+                    type="password"
+                    id="password"
+                    name="userPassword"
+                    data-name="firstPassword"
+                  />
                 </p>
                 <p>
                   <label for="password_confirm">Confirm Password</label
@@ -63,12 +68,15 @@
                     type="password"
                     id="password_confirm"
                     name="userPasswordConfirm"
+                    data-name="secondPassword"
                   />
                 </p>
               </section>
             </div>
             <div class="btn_wrapper">
-              <button class="submit_btn" type="submit">Create Account</button>
+              <button class="submit_btn" type="submit" data-name="submitBtn">
+                Create Account
+              </button>
             </div>
           </form>
           <p class="log_in_link">
@@ -78,4 +86,5 @@
       </section>
     </div>
   </body>
+  <script src="main.js"></script>
 </html>
