@@ -187,19 +187,11 @@ input.error[type="password"] {
   border: 2px solid #e33d3d;
 }
 
-input.error[type="password"]::after {
-  content: "*Passwords do not match";
-  display: block;
-  color: #e33d3d;
-  font-size: 0.8em;
-  margin-top: 5px;
-  background-color: rgba(255, 0, 0, 0.1);
-}
-/* .error_info {
+.error_info {
   color: #e33d3d;
   opacity: 0;
 }
 
 .error_info.error {
   opacity: 100%;
-} */
+}
