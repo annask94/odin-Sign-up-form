@@ -8,12 +8,22 @@
   box-sizing: border-box;
 }
 
+:root {
+  --padding-form-part: 3rem;
+  --border-radius: 10px;
+  --dark-green-color: #596d48;
+}
+
 body {
-  font-family: "Arial", sans-serif;
+  font-family: "Calibri", "Arial", sans-serif;
 }
 
 a {
   color: inherit;
+}
+
+a:hover {
+  opacity: 0.6;
 }
 
 .wrapper {
@@ -33,7 +43,7 @@ a {
 }
 
 .logo_container {
-  margin-top: 20vh;
+  margin-top: 10vw;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -42,19 +52,133 @@ a {
 }
 
 .logo_img {
-  height: 120px;
+  max-height: 120px;
 }
 .logo_text {
   font-family: "Norse";
-  font-size: 5rem;
+  font-size: clamp(2rem, 5vw, 5rem);
 }
 
+.content_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #f2f2f2;
+}
+
+header {
+  padding: min(5vw, var(--padding-form-part));
+  margin-bottom: 3rem;
+}
+
+header h2 {
+  margin-top: 2rem;
+}
+
+h2 {
+  font-size: min(6vw, 1.5rem);
+}
+
+.input_fields_wrapper {
+  background-color: white;
+  padding-left: var(--padding-form-part);
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.submit_btn {
+  margin-left: var(--padding-form-part);
+  padding: 1rem 3rem;
+  border-radius: var(--border-radius);
+  border: none;
+  color: white;
+  background-color: var(--dark-green-color);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.submit_btn:hover {
+  opacity: 0.8;
+}
+
+.log_in_link {
+  margin-left: var(--padding-form-part);
+}
 label {
+  font-size: 0.7rem;
+  letter-spacing: 2px;
   display: block;
   text-transform: uppercase;
 }
 
 .fields {
+  margin-top: 2rem;
+  max-width: 40%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+input {
+  border: 2px solid #e5e7eb;
+  border-radius: 5px;
+  padding: 5px;
+  margin-top: 5px;
+}
+
+input:focus {
+  outline: none;
+  border: 2px solid #3d74e3;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.login_link {
+  color: var(--dark-green-color);
+}
+
+@media only screen and (max-width: 630px) {
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* .logo_container {
+    margin-top: 5vw;
+  } */
+
+  .fields {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+  }
+
+  .input_fields_wrapper {
+    padding-left: 0;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  .btn_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .submit_btn {
+    margin-left: 0;
+  }
+
+  .log_in_link {
+    margin: 0;
+    text-align: center;
+  }
+
+  .image_credits {
+    font-size: 10px;
+  }
 }
