@@ -1,5 +1,3 @@
-# odin-Sign-up-form
-
 # Sign-up Form Project
 
 This project is a simple sign-up form created for [The Odin Project](https://www.theodinproject.com/). It features a clean and responsive design with basic form validation. It is also responsive.
